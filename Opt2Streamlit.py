@@ -1,7 +1,29 @@
 import streamlit as st
 import time
 import io
+st.markdown("""
+    <style>
+    /* Ocultar botón deploy / share */
+    [data-testid="stToolbar"] {
+        display: none;
+    }
 
+    /* Ocultar avatar / usuario */
+    .st-emotion-cache-1avcm0n {
+        display: none;
+    }
+
+    /* Ocultar footer */
+    footer {
+        visibility: hidden;
+    }
+
+    /* Ocultar menú hamburguesa (opcional) */
+    #MainMenu {
+        visibility: hidden;
+    }
+    </style>
+""", unsafe_allow_html=True)
 st.markdown("""
     <style>
         [data-testid="stToolbar"] {
