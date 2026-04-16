@@ -1,28 +1,16 @@
 import streamlit as st
 import time
 import io
+
 st.markdown("""
-    <style>
-    /* Ocultar botón deploy / share */
-    [data-testid="stToolbar"] {
-        display: none;
-    }
+<style>
 
-    /* Ocultar avatar / usuario */
-    .st-emotion-cache-1avcm0n {
-        display: none;
-    }
+/* Oculta TODO lo que esté fixed en la esquina */
+div[style*="position: fixed"] {
+    display: none !important;
+}
 
-    /* Ocultar footer */
-    footer {
-        visibility: hidden;
-    }
-
-    /* Ocultar menú hamburguesa (opcional) */
-    #MainMenu {
-        visibility: hidden;
-    }
-    </style>
+</style>
 """, unsafe_allow_html=True)
 st.markdown("""
     <style>
@@ -31,6 +19,7 @@ st.markdown("""
         }
     </style>
 """, unsafe_allow_html=True)
+
 st.set_page_config(page_title="Procesador OP72", layout="wide")
 
 st.title("📂 Operacion 72 → CSV OP72")
