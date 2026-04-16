@@ -4,32 +4,9 @@ import io
 
 st.markdown("""
 <style>
-
-/* 🔴 Botón flotante inferior derecha (el rojo) */
-[data-testid="stStatusWidget"] {
-    display: none !important;
+.block-container {
+    padding-top: 1rem;
 }
-
-/* 🔝 Toolbar (deploy, avatar, etc.) */
-[data-testid="stToolbar"] {
-    display: none !important;
-}
-
-/* ☰ Menú hamburguesa */
-#MainMenu {
-    visibility: hidden !important;
-}
-
-/* ⬇ Footer */
-footer {
-    visibility: hidden !important;
-}
-
-/* Espacio superior extra que deja el toolbar */
-header {
-    visibility: hidden !important;
-}
-
 </style>
 """, unsafe_allow_html=True)
 
