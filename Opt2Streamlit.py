@@ -5,33 +5,28 @@ import io
 st.markdown("""
 <style>
 
-/* Oculta toolbar completo (deploy, share, etc) */
+/* 🔴 Botón flotante inferior derecha (el rojo) */
+[data-testid="stStatusWidget"] {
+    display: none !important;
+}
+
+/* 🔝 Toolbar (deploy, avatar, etc.) */
 [data-testid="stToolbar"] {
     display: none !important;
 }
 
-/* Oculta botón flotante inferior derecha */
-[data-testid="stDecoration"] {
-    display: none !important;
-}
-
-/* Oculta cualquier botón flotante */
-button[kind="secondary"] {
-    display: none !important;
-}
-
-/* Oculta avatar / user icon */
-header div:has(img) {
-    display: none !important;
-}
-
-/* Oculta menú hamburguesa */
+/* ☰ Menú hamburguesa */
 #MainMenu {
     visibility: hidden !important;
 }
 
-/* Oculta footer */
+/* ⬇ Footer */
 footer {
+    visibility: hidden !important;
+}
+
+/* Espacio superior extra que deja el toolbar */
+header {
     visibility: hidden !important;
 }
 
