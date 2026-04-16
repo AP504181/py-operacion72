@@ -5,19 +5,37 @@ import io
 st.markdown("""
 <style>
 
-/* Oculta TODO lo que esté fixed en la esquina */
-div[style*="position: fixed"] {
+/* Oculta toolbar completo (deploy, share, etc) */
+[data-testid="stToolbar"] {
     display: none !important;
 }
 
+/* Oculta botón flotante inferior derecha */
+[data-testid="stDecoration"] {
+    display: none !important;
+}
+
+/* Oculta cualquier botón flotante */
+button[kind="secondary"] {
+    display: none !important;
+}
+
+/* Oculta avatar / user icon */
+header div:has(img) {
+    display: none !important;
+}
+
+/* Oculta menú hamburguesa */
+#MainMenu {
+    visibility: hidden !important;
+}
+
+/* Oculta footer */
+footer {
+    visibility: hidden !important;
+}
+
 </style>
-""", unsafe_allow_html=True)
-st.markdown("""
-    <style>
-        [data-testid="stToolbar"] {
-            visibility: hidden;
-        }
-    </style>
 """, unsafe_allow_html=True)
 
 st.set_page_config(page_title="Procesador OP72", layout="wide")
